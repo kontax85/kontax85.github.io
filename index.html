@@ -27,7 +27,7 @@
     <br>
     <div id="message"></div>
     <div id="hidden">
-        <button onclick="showSurprise()">Cliccami</button>
+        <a href="./Prenotazione.pdf" download="sample.PDF">Cliccami</a>
         <br>
         <br>
         <img src=".\GIA03494.jpg" style="width:50%"></p>
@@ -50,6 +50,11 @@
             const surprise = document.getElementById("hidden");
             surprise.style.display = "block";
             }
+        }
+        
+        function showSurprise() {
+            const surprise = document.getElementById("surprise");
+            surprise.style.display = "block";
         }
 
         typeMessage();
