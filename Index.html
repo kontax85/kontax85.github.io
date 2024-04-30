@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Buon Compleanno!</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 50px;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        #message {
+            font-size: 1.5em;
+            color: #333;
+        }
+        
+        #hidden {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Buon Compleanno Prokina!</h1>
+    <br>
+    <div id="message"></div>
+    <div id="hidden">
+        <button onclick="showSurprise()">Cliccami</button>
+        <br>
+        <br>
+        <img src=".\GIA03494.jpg" style="width:50%"></p>
+        
+        
+    </div>
+    <script>
+        const message = "Buon Compleanno Pikkola Proka!";
+        const messageElement = document.getElementById("message");
+
+        let i = 0;
+        function typeMessage() {
+            if (i < message.length) {
+                messageElement.textContent += message.charAt(i);
+                i++;
+                setTimeout(typeMessage, 100);
+            }
+            else
+            {
+            const surprise = document.getElementById("hidden");
+            surprise.style.display = "block";
+            }
+        }
+
+        typeMessage();
+    </script>
+</body>
+</html>
+
